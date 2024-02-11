@@ -1,0 +1,138 @@
+@import url("marinadog.css");
+
+#imagenHome{
+    background-image: url("../img/fotos/fondoHome.jpg");
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+}
+
+#imagenHome nav a, #imagenHome h3 {
+    margin: 0;
+    color: #FFFFFF;
+    font-weight: 100;
+}
+
+#imagenHome header {
+    border-bottom: 1px solid #FFFFFF;
+}
+
+#textoBanner {
+    width: 45%;
+    margin: 8%;
+    color: #FFFFFF;
+}
+
+#textoBanner h5 {
+    font-weight: 100;
+    margin-bottom: 25px;
+}
+
+article.home {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    
+}
+
+article.home img, article.home div {
+    width: 50%;
+    aspect-ratio: 16/9;
+}
+
+article.home div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5%;
+}
+
+article.home div h3 {
+    color: var(--primary-500);
+}
+
+/*MODO NOCHE*/
+#botonNoche {
+    position: absolute;
+    right: 20px;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    background-image: url('../img/iconos/luna.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+
+body.noche {
+    background-color: var(--neutral-900);
+}
+
+body.noche p {
+    color: #FFFFFF;
+}
+
+body.noche footer {
+    background-color: var(--primary-800);
+}
+
+body.noche #noche {
+    background-color: #0000004d;
+    backdrop-filter: blur(2px);
+    height: 100%;
+}
+
+@media screen and (max-width: 920px) {
+    header h3 {
+        display: none;
+    }
+    header {
+        padding: 20px 20px 10px 20px;
+        background-color: var(--neutral-200);
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    #imagenHome nav a {
+        color: #000000;
+    }
+
+    #textoBanner {
+        width: 90%;
+        margin: 5%;
+        margin-top: 30%;
+        text-align: center;
+    }
+
+    #textoBanner h5 {
+        width: 100%;
+        text-align: justify;
+    }
+    
+    #noche {
+        background-color: #0000004d;
+        backdrop-filter: blur(2px);
+        height: 100%;
+    }
+
+    article.home {
+        flex-direction: column;
+    }
+
+    article.home:nth-child(2) {
+        flex-direction: column-reverse;
+    }
+
+    article.home img, article.home div {
+        width: 100%;
+    }
+
+    footer {
+        margin-top: 20px;
+    }
+}

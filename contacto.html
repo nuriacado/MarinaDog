@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Contacto</title>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Nuria Castro Dominguez" />
+        <meta name="keywords" content=""/>
+        <meta name="description" content=""/>
+
+        <link rel="icon" type="image/x-icon" href="img/fotos/logo.png" />
+        <link rel="stylesheet" href="css/contacto.css" />
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="js/marinadog.js"></script>
+    </head>
+    <body>
+        <header>
+            <button id="menu" onclick="menuHamburguesa()"></button>
+
+            <div class="logo">
+                <a href="index.html"><img alt="Logo de Marina Dog" src="img/fotos/logo.png" id="logo" /></a>
+                <h3>Marina Dog</h3>
+            </div>
+
+            <div id="hamburguesa">
+                <nav>
+                    <a href="servicios.html" alt="Página de servicios" class="menu">Servicios</a>
+                    <a href="contacto.html" alt="Página de contacto" class="menu">Contacto</a>
+                </nav>
+                 
+                <div>
+                    <button onclick="location.href='reservar.html'" class="azul">Reserva ahora</button>
+    
+                    <ul class="nav">
+                        <li><img alt="Imagen de usuario" src="img/iconos/accountGrande.png" id="cuenta" />
+                            <ul class="desplegable">
+                                <li><a href="login.html">Iniciar Sesion</a></li>
+                                <li><a href="registro.html">Registrarse</a></li>
+    
+                                <li><a href="404.html">Mis datos</a></li>
+                                <li><a href="404.html">Mis reservas</a></li>
+                                <li><a href="404.html">Zona VIP</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        
+        <main>
+            <h1>Contacto</h1>
+
+            <section>
+                <div>
+                    <h4>Contacta con nosotros</h4>
+                    <div id="datos">
+                        <img class="icono" src="img/iconos/marcador.png" alt="Icono lugar">
+                        <p>Calle 123, 45, 11001 Cádiz (Cádiz)</p> <br />
+                        <img class="icono" src="img/iconos/sobre.png" alt="Icono correo electrónico">
+                        <p>contacto@marinadog.com</p> <br />
+                        <img class="icono" src="img/iconos/telefono.png" alt="Icono teléfono">
+                        <p>956874123</p> <br />
+                    </div>
+
+                    <div>
+                        <h4>Horario</h4>
+                        <p>Lunes a viernes: 9:39 - 13:30 / 16:30 - 20:30</p>
+                        <p>Sábados y domingos: 10:00 - 13:30</p>
+                    </div>
+                </div>
+
+                <form action="" method="post" onsubmit="return validarContacto()">
+                    <input type="text" id="nombre" name="nombre" placeholder="Nombre" /> <br />
+                    <input type="text" id="correo" name="correo" placeholder="Correo electrónico" /> <br />
+                    <input type="text" id="telefono" name="telefono" placeholder="Teléfono" /> <br />
+
+                    <select id="asunto" name="asunto">
+                        <option value="0">Asunto</option>
+                        <option value="residencia">Residencia canina</option>
+                        <option value="guarderia">Guardería</option>
+                        <option value="paseos">Paseos</option>
+                        <option value="adiestramiento">Adiestramiento</option>
+                        <option value="otro">Otro</option>
+                    </select> <br />
+
+                    <textarea id="mensaje" name="mensaje" placeholder="Mensaje"></textarea> <br />
+                    <input type="submit" value="Enviar"/>
+                </form>
+            </section>
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3705.664038359035!2d-6.269832924398521!3d36.49650905930572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0dd25724ec240f%3A0x40463fd8ca03b00!2zQ8OhZGl6!5e0!3m2!1ses!2ses!4v1701356813917!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </main>
+        
+
+        <footer>
+            <div id="redes">
+                <img alt="Icono instagram" src="img/iconos/instagram.png" />
+                <img alt="Icono facebook" src="img/iconos/facebook.png" />
+            </div>
+
+            <p><a href="aboutUs.html" alt="Página de servicios">Sobre nosotros</a>  |  <a href="contacto.html" alt="Página de servicios">Contacto</a></p>
+            <h5>Marina Dog</h5>
+        </footer>
+        
+    </body>
+</html>

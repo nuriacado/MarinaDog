@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Marina Dog</title>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Nuria Castro Dominguez" />
+        <meta name="keywords" content=""/>
+        <meta name="description" content=""/>
+
+        <link rel="icon" type="image/x-icon" href="img/fotos/logo.png" />
+        <link rel="stylesheet" href="css/home.css" />
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="js/marinadog.js"></script>
+    </head>
+
+    <body>
+        <div id="imagenHome">
+            <div id="noche">
+                <header>
+                    <button id="menu" onclick="menuHamburguesa()"></button>
+
+                    <div class="logo">
+                        <a href="index.html"><img alt="Logo de Marina Dog" src="img/fotos/logo.png" id="logo" /></a>
+                        <h3>Marina Dog</h3>
+                    </div>
+
+                    <div id="hamburguesa">
+                        <nav>
+                            <a href="servicios.html" alt="Página de servicios" class="menu">Servicios</a>
+                            <a href="contacto.html" alt="Página de contacto" class="menu">Contacto</a>
+                        </nav>
+                        
+                        <div>
+                            <button onclick="location.href='reservar.html'" class="azul">Reserva ahora</button>
+
+                            <ul class="nav">
+                                <li><img alt="Imagen de usuario" src="img/iconos/accountGrande.png" id="cuenta" />
+                                    <ul class="desplegable">
+                                        <li><a href="login.html">Iniciar Sesion</a></li>
+                                        <li><a href="registro.html">Registrarse</a></li>
+
+                                        <li><a href="404.html">Mis datos</a></li>
+                                        <li><a href="404.html">Mis reservas</a></li>
+                                        <li><a href="404.html">Zona VIP</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </header>
+
+                <button id="botonNoche" onclick="modoNoche()"></button>
+
+                <section id="textoBanner">
+                    <h2>Residencia canina de vacaciones</h2>
+                    <h5>¡Asegura la mejor experiencia para tu mascota en nuestra residencia canina! Ofrecemos un entorno seguro, atención personalizada y actividades divertidas. Nuestro equipo experto se encargará del bienestar de tu amigo peludo.</h5>
+                    <h5>¡Reservar ahora y bríndale a tu mascota unas vacaciones increíbles!</h5>
+                    <button onclick="location.href='reservar.html'" class="azul">Reserva ahora</button>
+                </section>
+            </div>
+        </div>
+
+        <main>
+            <article class="home">
+                    <img alt="Área de piscina para perros" src="img/fotos/piscina.jpeg" />
+                    <div class="texto">
+                        <h3>La Piscina Perfecta para tus Peludos Amigos</h3>
+                        <p>La diversión acuática no es solo para humanos. ¡Dale a tu perro la oportunidad de chapotear y nadar en nuestra piscina diseñada pensando en su alegría y bienestar! La diversión está garantizada.</p>
+                    </div>
+            </article>
+                
+            <article class="home">
+                    <div class="texto">
+                        <h3>Estancia de Lujo para tu Mejor Amigo</h3>
+                        <p>La habitación perfecta para tu peludo compañero está aquí. Con camas suaves, juguetes entretenidos y un equipo dedicado de cuidadores, nuestro hotel para perros garantiza que tu amigo disfrute de un descanso lleno de confort y seguridad.</p>
+                    </div>
+                    <img alt="Habitacion para perros" src="img/fotos/habitacion2.jpg" />
+            </article>
+                
+            <article class="home">
+                    <img alt="Parque canino de adiestramiento" src="img/fotos/pistaAdiestramiento.jpg" />
+                    <div class="texto">
+                        <h3>Potencia el Potencial de tu Peludo</h3>
+                        <p>En nuestro paraíso de entrenamiento, tu perro será guiado por entrenadores expertos que aman lo que hacen. Ya sea un cachorro en crecimiento o un compañero más experimentado, ofrecemos programas personalizados para cada etapa de la vida canina.</p>
+                    </div>
+            </article>    
+        </main>
+
+
+        <footer>
+            <div id="redes">
+                <img alt="Icono instagram" src="img/iconos/instagram.png" />
+                <img alt="Icono facebook" src="img/iconos/facebook.png" />
+            </div>
+
+            <p><a href="aboutUs.html" alt="Página de servicios">Sobre nosotros</a>  |  <a href="contacto.html" alt="Página de servicios">Contacto</a></p>
+            <h5>Marina Dog</h5>
+        </footer>
+    </body>
+</html>

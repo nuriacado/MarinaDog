@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>404 - Página no encontrada</title>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Nuria Castro Dominguez" />
+        <meta name="keywords" content=""/>
+        <meta name="description" content=""/>
+
+        <link rel="icon" type="image/x-icon" href="img/fotos/logo.png" />
+        <link rel="stylesheet" href="css/404.css" />
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="js/marinadog.js"></script>
+    </head>
+    <body>
+        <header>
+            <button id="menu" onclick="menuHamburguesa()"></button>
+
+            <div class="logo">
+                <a href="index.html"><img alt="Logo de Marina Dog" src="img/fotos/logo.png" id="logo" /></a>
+                <h3>Marina Dog</h3>
+            </div>
+
+            <div id="hamburguesa">
+                <nav>
+                    <a href="servicios.html" alt="Página de servicios" class="menu">Servicios</a>
+                    <a href="contacto.html" alt="Página de contacto" class="menu">Contacto</a>
+                </nav>
+                 
+                <div>
+                    <button onclick="location.href='reservar.html'" class="azul">Reserva ahora</button>
+    
+                    <ul class="nav">
+                        <li><img alt="Imagen de usuario" src="img/iconos/accountGrande.png" id="cuenta" />
+                            <ul class="desplegable">
+                                <li><a href="login.html">Iniciar Sesion</a></li>
+                                <li><a href="registro.html">Registrarse</a></li>
+    
+                                <li><a href="404.html">Mis datos</a></li>
+                                <li><a href="404.html">Mis reservas</a></li>
+                                <li><a href="404.html">Zona VIP</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        
+        <section>
+            <div class="blur">
+                <p>¡Ups! Parece que no hemos podido olfatear esta página.</p>
+                <h1>404</h1>
+                <button onclick="location.href='index.html'" class="azul">Volver al inicio</button>
+
+            </div>
+
+        </section>
+        
+        <footer>
+            <div id="redes">
+                <img alt="Icono instagram" src="img/iconos/instagram.png" />
+                <img alt="Icono facebook" src="img/iconos/facebook.png" />
+            </div>
+
+            <p><a href="aboutUs.html" alt="Página de servicios">Sobre nosotros</a>  |  <a href="contacto.html" alt="Página de servicios">Contacto</a></p>
+            <h5>Marina Dog</h5>
+        </footer>
+        
+    </body>
+</html>

@@ -1,0 +1,77 @@
+@import url("marinadog.css");
+
+main {
+    text-align: center;
+}
+
+#blur {
+    background-image: url("../img/fotos/perroFeliz.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 20px 0;
+}
+
+h1{
+    width: 100%;
+    padding: 100px;
+    color: #FFFFFF;
+    background-color: #0000004d;
+    backdrop-filter: blur(2px);
+    margin: 0;
+}
+
+#puntos {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+article {
+    width: 40%;
+    padding: 30px;
+    min-width: 400px;
+}
+
+main h5 {
+    width: 90%;
+    margin: 0 auto;
+    padding: 50px;
+    min-width: 400px;
+}
+
+main h3 { 
+    color:#398783;
+}
+
+span {
+    color: #F75713;
+}
+
+@media screen and (max-width: 920px) {
+    h1 {
+        padding: 50px 20px;
+    }
+    
+    article {
+        min-width: 0;
+        width: 90%;
+        max-width: 400px;
+        padding: 20px 0;
+        text-align: justify;
+    }
+
+    main h5 {
+        margin: 30px 0;
+        min-width: 0;
+        width: 90%;
+        padding: 0;
+        text-align: justify;
+    }
+
+    main h3 {
+        text-align: center;
+    }
+}

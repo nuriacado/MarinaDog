@@ -1,0 +1,47 @@
+@import url("marinadog.css");
+
+section {
+    background-image: url('../img/fotos/perro4046.avif');
+    height: 100vh;
+    margin-bottom: 40px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.blur {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 10%;
+}
+
+h1 {
+    color: #FFFFFF;
+    font-size: 200px;
+    margin: 0;
+}
+
+p {
+    color: #FFFFFF;
+    font-size: 30px;
+    text-align: center;
+}
+
+.blur button {
+    margin-top: 5%;
+}
+
+/*AJUSTE A PANTALLAS PEQUEÑAS*/
+@media screen and (max-width: 920px) {
+    p {
+        font-size: 20px;
+        margin: 40% 20px 0 20px;
+    }
+
+    h1 {
+        font-size: 100px;
+    }
+}

@@ -1,0 +1,131 @@
+@import url("marinadog.css");
+
+header {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+    padding: 20px;
+    border: none;
+    color:#FFFFFF
+}
+
+h2 {
+    font-weight: 100;
+    margin: 0;
+}
+
+.fondoLogin {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../img/fotos/fondoRegistro.jpg");
+}
+
+main {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    justify-content: center
+}
+
+footer {
+    background-color: #ffffff00;
+}
+
+main div {
+    margin: 0 auto;
+    padding: 50px;
+    background-color: #ffffff96;
+    height: fit-content;
+    width: 40%;
+    min-width: 400px;
+}
+
+main h3 {
+    margin-bottom:40px;
+    width: 100%;
+    text-align: center;
+}
+
+main a {
+    display: block;
+    text-decoration: none;
+    color:#F75713;
+    margin: 2px 10% 2px 10%;
+    text-align: left;
+}
+
+main a:hover {
+    text-decoration: underline;
+
+}
+
+input {
+    width: 80%;
+    padding: 15px 20px;
+    margin: 5px 10% 5px 10%;
+    border: 1px solid var(--neutral-600);
+    border-radius: 0;
+    box-shadow: inset 0px 8px 5px -5px rgba(0,0,0,0.15);
+}
+
+input:focus {
+    outline: 2px solid var(--primary-500);
+}
+
+[type='submit'] {
+    margin-top: 20px;
+    background-color: #398783;
+    border: none;
+    color: #FFFFFF;
+    width: 60%;
+    padding: 20px;
+    font-weight: 600;
+    box-shadow: none;
+    margin: 20px 10% 2px 20%;
+}
+
+[type='checkbox'] {
+    margin: 2px 2px 20px 10%;
+    padding: 0;
+    width: 12px;
+}
+
+[type='submit']:hover {
+    background-color: #204D4B;
+}
+
+p {
+    width: 80%;
+    padding-left: 22%;
+}
+
+@media screen and (max-width: 920px) {
+    header {
+        padding-top: 40px;
+    }
+    main div {
+        width: 95%;
+        min-width: 0;
+        padding: 30px 20px;
+    }
+
+    input {
+        width: 95%;
+        margin: 5px 0;
+    }
+
+    form {
+        text-align: center;
+    }
+
+    form a {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    [type='checkbox'] {
+        margin: 2px 0;
+    }
+}

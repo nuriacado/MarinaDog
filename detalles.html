@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Detalles</title>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Nuria Castro Dominguez" />
+        <meta name="keywords" content=""/>
+        <meta name="description" content=""/>
+
+        <link rel="icon" type="image/x-icon" href="img/fotos/logo.png" />
+        <link rel="stylesheet" href="css/detalles.css" />
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="js/marinadog.js"></script>
+    </head>
+    <body>
+        <header>
+            <button id="menu" onclick="menuHamburguesa()"></button>
+
+            <div class="logo">
+                <a href="index.html"><img alt="Logo de Marina Dog" src="img/fotos/logo.png" id="logo" /></a>
+                <h3>Marina Dog</h3>
+            </div>
+
+            <div id="hamburguesa">
+                <nav>
+                    <a href="servicios.html" alt="Página de servicios" class="menu">Servicios</a>
+                    <a href="contacto.html" alt="Página de contacto" class="menu">Contacto</a>
+                </nav>
+                 
+                <div>
+                    <button onclick="location.href='reservar.html'" class="azul">Reserva ahora</button>
+    
+                    <ul class="nav">
+                        <li><img alt="Imagen de usuario" src="img/iconos/accountGrande.png" id="cuenta" />
+                            <ul class="desplegable">
+                                <li><a href="login.html">Iniciar Sesion</a></li>
+                                <li><a href="registro.html">Registrarse</a></li>
+    
+                                <li><a href="404.html">Mis datos</a></li>
+                                <li><a href="404.html">Mis reservas</a></li>
+                                <li><a href="404.html">Zona VIP</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        
+        <main>
+            <section>
+                <div class="blur">
+                    
+                    <form action="listado.html" method="post">
+                        <div>
+                            <div>
+                                <label for="fecha_entrada">Fecha de Entrada:</label>
+                                <input type="date" id="fecha_entrada" name="fecha_entrada">
+                            </div>
+                                
+                            <div>
+                                <label for="fecha_salida">Fecha de Salida:</label>
+                                <input type="date" id="fecha_salida" name="fecha_salida">
+                            </div>
+                                                
+                            <div>
+                                <label for="perros">Nº perros:</label>
+                                <select id="perros" name="perros">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select>
+                            </div>
+    
+                            <input type="submit" value="Buscar habitación">                   
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+           <section>
+                <h3>Habitación individual para perros pequeños</h3>
+
+                <div>
+                    <img id="habitacion1" src="img/fotos/habitacion1.jpeg" alt="Foto de habitación individual para perros pequeños">
+                    <div id="resumen">
+                        <div id="opiniones">
+                            <h4>Opiniones:</h4>
+                            <img src="img/iconos/fullStar.png" alt="Estrella completa" />
+                            <img src="img/iconos/fullStar.png" alt="Estrella completa" />
+                            <img src="img/iconos/fullStar.png" alt="Estrella completa" />
+                            <img src="img/iconos/fullStar.png" alt="Estrella completa" />
+                            <img src="img/iconos/emptyStar.png" alt="Estrella vacía" />
+                        </div>
+                        
+                        <button class="azul">Reservar</button>
+                        <h5>Nuestra habitación para perros pequeños está diseñada pensando en las necesidades y preferencias de razas más pequeñas. Entre sus características principales incluye:</h5>
+                    </div>                    
+                </div>
+
+                <ul>
+                    <li>
+                        <h4>Camas pequeñas y acogedoras:</h4>
+                        <h5>Ofrecemos camas pequeñas y acogedoras, proporcionando un espacio cómodo y seguro para tu perro pequeño descansar plácidamente.</h5>
+                    </li>
+                    <li>
+                        <h4>Áreas de juego compactas:</h4>
+                        <h5>Aunque el espacio es más reducido, creamos áreas de juego diseñadas para el tamaño de perros pequeños, fomentando la actividad y el entretenimiento.</h5>
+                    </li>
+                    <li>
+                        <h4>Iluminación suave y agradable:</h4>
+                        <h5>La iluminación suave contribuye a un ambiente relajado y apacible, creando un rincón confortable para tu perro pequeño.</h5>
+                    </li>
+                    <li>
+                        <h4>Juguetes adaptados:</h4>
+                        <h5>Proporcionamos juguetes pequeños y seguros para razas diminutas, garantizando que el entretenimiento sea seguro y adecuado para su tamaño.</h5>
+                    </li>
+                    <li>
+                        <h4>Areas compactas de comida y agua:</h4>
+                        <h5>Cada perro pequeño tiene su propio espacio designado para comer y beber, asegurando un acceso fácil y seguro.</h5>
+                    </li>
+                    <li>
+                        <h4>Control de temperatura adaptado:</h4>
+                        <h5>La habitación para perros pequeños está equipada con sistemas de ventilación y control de temperatura que se ajustan a las necesidades específicas de perros de menor tamaño.</h5>
+                    </li>
+                </ul>
+                <button class="azul">Reservar</button>
+            </section>
+        </main>
+ 
+        <footer>
+            <div id="redes">
+                <img alt="Icono instagram" src="img/iconos/instagram.png" />
+                <img alt="Icono facebook" src="img/iconos/facebook.png" />
+            </div>
+
+            <p><a href="aboutUs.html" alt="Página de servicios">Sobre nosotros</a>  |  <a href="contacto.html" alt="Página de servicios">Contacto</a></p>
+            <h5>Marina Dog</h5>
+        </footer>
+        
+    </body>
+</html>

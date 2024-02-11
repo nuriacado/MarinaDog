@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Reservar</title>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Nuria Castro Dominguez" />
+        <meta name="keywords" content=""/>
+        <meta name="description" content=""/>
+
+        <link rel="icon" type="image/x-icon" href="img/fotos/logo.png" />
+        <link rel="stylesheet" href="css/listado.css" />
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="js/marinadog.js"></script>
+    </head>
+    <body>
+        <header>
+            <button id="menu" onclick="menuHamburguesa()"></button>
+
+            <div class="logo">
+                <a href="index.html"><img alt="Logo de Marina Dog" src="img/fotos/logo.png" id="logo" /></a>
+                <h3>Marina Dog</h3>
+            </div>
+
+            <div id="hamburguesa">
+                <nav>
+                    <a href="servicios.html" alt="Página de servicios" class="menu">Servicios</a>
+                    <a href="contacto.html" alt="Página de contacto" class="menu">Contacto</a>
+                </nav>
+                 
+                <div>
+                    <button onclick="location.href='reservar.html'" class="azul">Reserva ahora</button>
+    
+                    <ul class="nav">
+                        <li><img alt="Imagen de usuario" src="img/iconos/accountGrande.png" id="cuenta" />
+                            <ul class="desplegable">
+                                <li><a href="login.html">Iniciar Sesion</a></li>
+                                <li><a href="registro.html">Registrarse</a></li>
+    
+                                <li><a href="404.html">Mis datos</a></li>
+                                <li><a href="404.html">Mis reservas</a></li>
+                                <li><a href="404.html">Zona VIP</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        
+        <main>
+            <section>
+                <div class="blur">
+                    
+                    <form action="listado.html" method="post">
+                        <div>
+                            <div>
+                                <label for="fecha_entrada">Fecha de Entrada:</label>
+                                <input type="date" id="fecha_entrada" name="fecha_entrada">
+                            </div>
+                                
+                            <div>
+                                <label for="fecha_salida">Fecha de Salida:</label>
+                                <input type="date" id="fecha_salida" name="fecha_salida">
+                            </div>
+                                                
+                            <div>
+                                <label for="perros">Nº perros:</label>
+                                <select id="perros" name="perros">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select>
+                            </div>
+    
+                            <input type="submit" value="Buscar habitación">                   
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <section>
+                <article>
+                    <div>
+                        <img src="img/fotos/habitacion1.jpeg" alt="Foto de habitación individual para perros pequeños">
+                        <div class="detalles">
+                            <div>
+                                <h4>Habitación individual perro pequeño</h4>
+                                <ul>
+                                     <li>Cama suave y compacta</li>
+                                     <li>Juguetes adaptados</li>
+                                     <li>Áreas de juego a escala</li>
+                                </ul>
+                            </div>
+                            
+                            <a>Ver más detalles</a>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4>12€/noche</h4>
+                        <button class="azul" onclick="location.href='detalles.html'">Reservar</button>
+                    </div>
+                </article>
+
+                <article>
+                    <div>
+                        <img src="img/fotos/habitacion2.jpg" alt="Foto de habitación individual para perros grandes">
+                        <div class="detalles">
+                            <div>
+                                <h4>Habitación individual perro grande</h4>
+                                <ul>
+                                     <li>Cama extra grande</li>
+                                     <li>Áreas de juego extensas</li>
+                                     <li>Juguetes robustos</li>
+                                </ul>
+                            </div>
+                            
+                            <a>Ver más detalles</a>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4>15€/noche</h4>
+                        <button class="azul" onclick="location.href='detalles.html'">Reservar</button>
+                    </div>
+                </article>
+
+                <article>
+                    <div>
+                        <img src="img/fotos/habitacion3.jpg" alt="Foto de habitación doble para perros pequeños">
+                        <div class="detalles">
+                            <div>
+                                <h4>Habitación doble perro pequeño</h4>
+                                <ul>
+                                     <li>Dos camas individuales acogedoras</li>
+                                     <li>Juguetes adaptados</li>
+                                     <li>Áreas de juego compactas</li>
+                                </ul>
+                            </div>
+                            
+                            <a>Ver más detalles</a>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4>20€/noche</h4>
+                        <button class="azul" onclick="location.href='detalles.html'">Reservar</button>
+                    </div>
+                </article>
+
+                <article>
+                    <div>
+                        <img src="img/fotos/habitacion4.jpg" alt="Foto de habitación doble para perros grandes">
+                        <div class="detalles">
+                            <div>
+                                <h4>Habitación doble perro grande</h4>
+                                <ul>
+                                     <li>Dos camas individuales espaciosas</li>
+                                     <li>Áreas de juego compartidas</li>
+                                     <li>Juguetes robustos</li>
+                                </ul>
+                            </div>
+                            
+                            <a>Ver más detalles</a>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4>26€/noche</h4>
+                        <button class="azul" onclick="location.href='detalles.html'">Reservar</button>
+                    </div>
+                </article>
+            </section>
+
+            
+        </main>
+        
+        <footer>
+            <div id="redes">
+                <img alt="Icono instagram" src="img/iconos/instagram.png" />
+                <img alt="Icono facebook" src="img/iconos/facebook.png" />
+            </div>
+
+            <p><a href="aboutUs.html" alt="Página de servicios">Sobre nosotros</a>  |  <a href="contacto.html" alt="Página de servicios">Contacto</a></p>
+            <h5>Marina Dog</h5>
+        </footer>
+        
+    </body>
+</html>
