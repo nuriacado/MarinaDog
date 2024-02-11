@@ -1,9 +1,11 @@
 @import url("marinadog.css");
 
+/*POSICIONAMIENTO DEL TEXTO*/
 main {
     text-align: center;
 }
 
+/*IMAGEN DE PERRO EN EL FONDO DEL TITULO*/
 #blur {
     background-image: url("../img/fotos/perroFeliz.jpg");
     background-position: center;
@@ -12,15 +14,8 @@ main {
     margin: 20px 0;
 }
 
-h1{
-    width: 100%;
-    padding: 100px;
-    color: #FFFFFF;
-    background-color: #0000004d;
-    backdrop-filter: blur(2px);
-    margin: 0;
-}
 
+/*POSICIONAMIENTO DE LOS ARTICLES*/
 #puntos {
     display: flex;
     flex-wrap: wrap;
@@ -33,6 +28,16 @@ article {
     width: 40%;
     padding: 30px;
     min-width: 400px;
+}
+
+/*TEXTOS*/
+h1{
+    width: 100%;
+    padding: 100px;
+    color: #FFFFFF;
+    background-color: #0000004d;
+    backdrop-filter: blur(2px);
+    margin: 0;
 }
 
 main h5 {
@@ -50,6 +55,7 @@ span {
     color: #F75713;
 }
 
+/*ADAPTADO A PANTALLAS PEQUEÑAS*/
 @media screen and (max-width: 920px) {
     h1 {
         padding: 50px 20px;

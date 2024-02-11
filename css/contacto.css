@@ -1,5 +1,6 @@
 @import url("marinadog.css");
 
+/*POSICIONAMIENTO DEL SECTION QUE CONTIENE DATOS Y FORM*/
 section {
     background-color: var(--neutral-100);
     display: flex;
@@ -11,16 +12,13 @@ section {
     padding: 30px 0;
 }
 
+/*ESTILO DEL MAPA*/
 iframe {
     margin: 50px auto;
     width: 100%;
 }
 
-h4 {
-    width: 100%;
-    text-align: center;
-}
-
+/*ESTILO DE FORM*/
 form {
     width: 35%;
     margin: 0 75px;
@@ -60,9 +58,15 @@ textarea {
     border-color: var(--secondary-700);
 }
 
+/*ESTILO DEL SECTION DE LOS DATOS*/
 section div:first-child {
     width: 25%;
     min-width: 350px;
+}
+
+h4 {
+    width: 100%;
+    text-align: center;
 }
 
 #datos p {
@@ -78,10 +82,15 @@ section div:first-child {
     margin-top: 20px;
 }
 
+
+
+/*ADAPTADO A PANTALLAS PEQUEÑAS*/
 @media screen and (max-width: 900px) {
     section {
         width: 100%;
     }
+
+    /*POSICIONAMIENTO DEL FORM*/
     form {
         text-align: center;
         width: 100%;
@@ -98,6 +107,7 @@ section div:first-child {
         margin-top: 20px;
     }
 
+    /*POSICIONAMIENTO DE LOS DATOS*/
     section div:first-child {
         width: 90%;
         padding: 0 20px;

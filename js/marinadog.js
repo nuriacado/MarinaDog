@@ -2,6 +2,7 @@
 function modoNoche() {
     let body = document.body;
     let boton = document.getElementById("botonNoche");
+    let menu = document.getElementById("menu");
 
     if (body.className == 'noche') {
         body.className = '';
@@ -20,67 +21,136 @@ function menuHamburguesa() {
 
     if(desplegable.className == "visible") {
         desplegable.className = "";
-        menu.style.backgroundImage = "url('img/iconos/menuNegro.png')"
+        let color = document.body.className == 'noche' ? "url('img/iconos/menuBlanco.png')" : "url('img/iconos/menuNegro.png')"
+
+        menu.style.backgroundImage = color;
+
     } else {
         desplegable.className = "visible";
-        menu.style.backgroundImage = "url('img/iconos/close.png')"
+        let color = document.body.className == 'noche' ? "url('img/iconos/closeBlanco.png')" : "url('img/iconos/closeNegro.png')"
+
+        menu.style.backgroundImage = color
     }
 }
 
+/* FUNCIONES QUE VOY A UTILIZAR PARA VALIDAR LOS DIFERENTES FORMULARIOS */
+function validarNombre(nombre) {
+    if ( nombre.value == null || nombre.value.length == 0 || /^\s+$/.test(nombre.value) ) {
+        nombre.className = "invalido";
+        nombre.placeholder = "Introduce un nombre";
+        return false;
+    } else {
+        nombre.className = "";
+        nombre.placeholder = "Nombre";
+        return true;
+    }
+}
+
+function validarMensaje(mensaje) {
+    if ( mensaje.value == null || mensaje.value.length == 0 || /^\s+$/.test(mensaje.value) ) {
+        mensaje.className = "invalido";
+        mensaje.placeholder = "Introduce un mensaje";
+        return false;
+    } else {
+        mensaje.className = "";
+        mensaje.placeholder = "Mensaje";
+        return true;
+    }
+}
+
+function validarTelefono(telefono) {
+    if( !(/^\d{9}$/.test(telefono.value)) ) {
+        telefono.className = "invalido";
+        telefono.placeholder = "Telefono invalido";
+        return false;
+    } else {
+        telefono.className = "";
+        telefono.placeholder = "Teléfono";
+        return true;
+    }
+}
+
+function validarCorreo(correo) {
+    const expresion = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
+    if( !expresion.test(correo.value))  {
+        correo.className = "invalido";
+        correo.placeholder = "Correo invalido";
+        return false;
+    } else {
+        correo.className = "";
+        correo.placeholder = "Correo electrónico";
+        return true;
+    }
+}
+
+function validarUsuario(usuario) {
+    if ( usuario.value == null || usuario.value.length == 0 || /^\s+$/.test(usuario.value) ) {
+        usuario.className = "invalido";
+        usuario.placeholder = "Introduce un usuario";
+        return false;
+    } else {
+        usuario.className = "";
+        usuario.placeholder = "Usuario";
+        return true;
+    }
+}
+
+function validarApellidos(apellidos) {
+    if ( apellidos.value == null || apellidos.value.length == 0 || /^\s+$/.test(apellidos.value) ) {
+        apellidos.className = "invalido";
+        apellidos.placeholder = "Introduce un apellido";
+        return false;
+    } else {
+        apellidos.className = "";
+        apellidos.placeholder = "Apellidos";
+        return true;
+    }
+}
+
+function validarContrasenia1(contrasenia1) {
+    if ( contrasenia1.value == null || contrasenia1.value.length == 0 || /^\s+$/.test(contrasenia1.value) ) {
+        contrasenia1.className = "invalido";
+        contrasenia1.placeholder = "Introduce una contraseña";
+        return false;
+    } else {
+        contrasenia1.className = "";
+        contrasenia1.placeholder = "Contraseña";
+        return true;
+    }
+}
+
+function validarContrasenia2(contrasenia2) {
+    if ( contrasenia2.value != contrasenia1.value ) {
+        contrasenia2.className = "invalido";
+        contrasenia2.placeholder = "Las contraseñas no coinciden";
+        return false;
+    } else {
+        contrasenia2.className = "";
+        contrasenia2.placeholder = "Repite la contraseña";
+        return true;
+    }
+}
+
+
 /*VALIDACION DE FORMULARIO CONTACTO*/
 function validarContacto() {
-    flag = true;
-
     let nombre = document.getElementById("nombre");
     let correo = document.getElementById("correo");
     let telefono = document.getElementById("telefono");
     let mensaje = document.getElementById("mensaje");
 
-    const expresion = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    validarNombre(nombre)
+    validarMensaje(mensaje)
+    validarTelefono(telefono) 
+    validarCorreo(correo)
 
-    if ( nombre.value == null || nombre.value.length == 0 || /^\s+$/.test(nombre.value) ) {
-        nombre.className = "invalido";
-        nombre.placeholder = "Introduce un nombre";
-        flag = false;
-    } else {
-        nombre.className = "";
-        nombre.placeholder = "Nombre";
-    }
-
-    if ( mensaje.value == null || mensaje.value.length == 0 || /^\s+$/.test(mensaje.value) ) {
-        mensaje.className = "invalido";
-        mensaje.placeholder = "Introduce un mensaje";
-        flag = false;
-    } else {
-        mensaje.className = "";
-        mensaje.placeholder = "Mensaje";
-    }
-
-    if( !(/^\d{9}$/.test(telefono.value)) ) {
-        telefono.className = "invalido";
-        telefono.placeholder = "Telefono invalido";
-        flag = false;
-    } else {
-        telefono.className = "";
-        telefono.placeholder = "Teléfono";
-    }
-
-    if( !expresion.test(correo.value))  {
-        correo.className = "invalido";
-        correo.placeholder = "Correo invalido";
-        flag = false;
-    } else {
-        correo.className = "";
-        correo.placeholder = "Correo electrónico";
-    }
-
-    return flag;
+    return (validarNombre(nombre) && validarMensaje(mensaje) && validarTelefono(telefono) && validarCorreo(correo));
 }
+
 
 /* VALIDACION REGISTRO */
 function validarRegistro() {
-    flag = true;
-
     let usuario = document.getElementById("usuario");
     let correo = document.getElementById("correo");
     let nombre = document.getElementById("nombre");
@@ -89,72 +159,15 @@ function validarRegistro() {
     let contrasenia1 = document.getElementById("contrasenia1");
     let contrasenia2 = document.getElementById("contrasenia2");
 
-    const expresion = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    validarNombre(nombre) 
+    validarTelefono(telefono) 
+    validarCorreo(correo)
+    validarApellidos(apellidos)
+    validarUsuario(usuario)
+    validarContrasenia1(contrasenia1) 
+    validarContrasenia2(contrasenia2)
 
-    if ( usuario.value == null || usuario.value.length == 0 || /^\s+$/.test(usuario.value) ) {
-        usuario.className = "invalido";
-        usuario.placeholder = "Introduce un usuario";
-        flag = false;
-    } else {
-        usuario.className = "";
-        usuario.placeholder = "Usuario";
-    }
-
-    if ( nombre.value == null || nombre.value.length == 0 || /^\s+$/.test(nombre.value) ) {
-        nombre.className = "invalido";
-        nombre.placeholder = "Introduce un nombre";
-        flag = false;
-    } else {
-        nombre.className = "";
-        nombre.placeholder = "Nombre";
-    }
-
-    if ( apellidos.value == null || apellidos.value.length == 0 || /^\s+$/.test(apellidos.value) ) {
-        apellidos.className = "invalido";
-        apellidos.placeholder = "Introduce un apellido";
-        flag = false;
-    } else {
-        apellidos.className = "";
-        apellidos.placeholder = "Apellidos";
-    }
-
-    if( !(/^\d{9}$/.test(telefono.value)) ) {
-        telefono.className = "invalido";
-        telefono.placeholder = "Telefono invalido";
-        flag = false;
-    } else {
-        telefono.className = "";
-        telefono.placeholder = "Teléfono";
-    }
-
-    if( !expresion.test(correo.value))  {
-        correo.className = "invalido";
-        correo.placeholder = "Correo invalido";
-        flag = false;
-    } else {
-        correo.className = "";
-        correo.placeholder = "Correo electrónico";
-    }
-
-    if ( contrasenia1.value == null || contrasenia1.value.length == 0 || /^\s+$/.test(contrasenia1.value) ) {
-        contrasenia1.className = "invalido";
-        contrasenia1.placeholder = "Introduce una contraseña";
-        flag = false;
-    } else {
-        contrasenia1.className = "";
-        contrasenia1.placeholder = "Contraseña";
-    }
-
-    if ( contrasenia2.value != contrasenia1.value ) {
-        contrasenia2.className = "invalido";
-        contrasenia2.placeholder = "Las contraseñas no coinciden";
-        flag = false;
-    } else {
-        contrasenia2.className = "";
-        contrasenia2.placeholder = "Repite la contraseña";
-    }
-
-    return flag;
+    return (validarNombre(nombre) &&  validarTelefono(telefono) &&  validarCorreo(correo) && validarApellidos(apellidos) && validarUsuario(usuario) && validarContrasenia1(contrasenia1) && validarContrasenia2(contrasenia2));
 }
 
 /* FUNCIÓN PARA VALIDAR EL INCIO DE SESIÓN */
@@ -164,41 +177,29 @@ function validarInicio() {
     let usuario = document.getElementById("usuario");
     let contrasenia = document.getElementById("contrasenia");
 
-    if ( usuario.value == null || usuario.value.length == 0 || /^\s+$/.test(usuario.value) ) {
-        usuario.className = "invalido";
-        usuario.placeholder = "Introduce un usuario";
-        flag = false;
-    } else {
-        usuario.className = "";
-        usuario.placeholder = "Usuario";
+    validarUsuario(usuario)
+    validarContrasenia1(contrasenia)
+
+    if (validarUsuario(usuario) && validarContrasenia1(contrasenia)) {
+
+        return true;
     }
 
-    if ( contrasenia.value == null || contrasenia.value.length == 0 || /^\s+$/.test(contrasenia.value) ) {
-        contrasenia.className = "invalido";
-        contrasenia.placeholder = "Introduce una contraseña";
-        flag = false;
-    } else {
-        contrasenia.className = "";
-        contrasenia.placeholder = "Contraseña";
-    }
-
-    return flag;
-
+    return false;
 }
-/*
+
 $(document).ready(function() {
-    /* PARA QUE SE CIERRE EL MENU HAMBURGUESA CUANDO PULSAS FUERA 
+    /* PARA QUE SE CIERRE EL MENU HAMBURGUESA CUANDO PULSAS FUERA */
     $(document).on("click",function(e) {
-                    
+        let desplegable = document.getElementById("hamburguesa");
         var container = $("#hamburguesa");
         var menu = $("#menu")
                            
-           if (!container.is(e.target) && container.has(e.target).length === 0 &&!menu.is(e.target)) { 
+           if (!container.is(e.target) && container.has(e.target).length === 0 &&!menu.is(e.target) && desplegable!=null) { 
                 let menu = document.getElementById("menu");
-                let desplegable = document.getElementById("hamburguesa");
                 desplegable.className = "";
-                menu.style.backgroundImage = "url('img/iconos/menuNegro.png')"
+                let color = document.body.className == 'noche' ? "url('img/iconos/menuBlanco.png')" : "url('img/iconos/menuNegro.png')"
+                menu.style.backgroundImage = color;
            }
     });
 });
-*/

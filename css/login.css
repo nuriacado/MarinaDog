@@ -1,5 +1,6 @@
 @import url("marinadog.css");
 
+/*LOGO Y NOMBRE*/
 header {
     display: flex;
     align-items: center;
@@ -15,6 +16,7 @@ h2 {
     margin: 0;
 }
 
+/*IMAGEN DE FONDO*/
 .fondoLogin {
     background-position: center;
     background-repeat: no-repeat;
@@ -29,10 +31,12 @@ main {
     justify-content: center
 }
 
+/*ESTILO DEL FOOTER*/
 footer {
     background-color: #ffffff00;
 }
 
+/*POSICIONAMIENTO Y ESTILO DEL RECUADRO DE LOGIN O REGISTRO*/
 main div {
     margin: 0 auto;
     padding: 50px;
@@ -58,9 +62,9 @@ main a {
 
 main a:hover {
     text-decoration: underline;
-
 }
 
+/*FORMULARIO DE REGISTRO*/
 input {
     width: 80%;
     padding: 15px 20px;
@@ -101,7 +105,9 @@ p {
     padding-left: 22%;
 }
 
+/*ADAPTADO A PANTALLAS PEQUEÑAS*/
 @media screen and (max-width: 920px) {
+    /*HEADER Y MAIN*/
     header {
         padding-top: 40px;
     }
@@ -111,6 +117,7 @@ p {
         padding: 30px 20px;
     }
 
+    /*FORMULARIO DE REGISTRO*/
     input {
         width: 95%;
         margin: 5px 0;

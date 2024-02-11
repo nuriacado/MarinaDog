@@ -1,5 +1,6 @@
 @import url("marinadog.css");
 
+/*FORMATO DE LA CABECERA (IMAGEN Y TEXTO) Y DEL HEADER*/
 #imagenHome{
     background-image: url("../img/fotos/fondoHome.jpg");
     background-position: top;
@@ -30,6 +31,7 @@
     margin-bottom: 25px;
 }
 
+/*FORMATO DE LAS IMAGENES Y TEXTOS DE LAS INSTALACIONES*/
 article.home {
     display: flex;
     flex-direction: row;
@@ -87,10 +89,13 @@ body.noche #noche {
     height: 100%;
 }
 
+/*ADAPTADO A PANTALLAS PEQUEÑAS*/
 @media screen and (max-width: 920px) {
+    /*CABECERA Y HEADER*/
     header h3 {
         display: none;
     }
+    
     header {
         padding: 20px 20px 10px 20px;
         background-color: var(--neutral-200);
@@ -120,6 +125,7 @@ body.noche #noche {
         height: 100%;
     }
 
+    /*INSTALACIONES*/
     article.home {
         flex-direction: column;
     }
@@ -132,7 +138,47 @@ body.noche #noche {
         width: 100%;
     }
 
+    /*FOOTER*/
     footer {
         margin-top: 20px;
+    }
+
+    /*MODO OSCURO PARA PANTALLAS PEQUEÑAS*/
+    body.noche  {
+        header {
+            background-color: var(--primary-800);
+        }
+
+        #imagenHome header {
+            border: 1px solid var(--primary-800);
+        }
+
+        #menu {
+            background-image: url('../img/iconos/menuBlanco.png');
+        }
+
+        .desplegable {
+            background-color: var(--primary-800);
+
+            a {
+                color: #FFFFFF;
+            }  
+        }
+
+        .desplegable li:hover {
+            background-color: var(--primary-800);
+        }
+
+        nav {
+            background-color: var(--primary-500);
+        }
+
+        .desplegable::after {
+            border-bottom: 10px solid var(--primary-500);
+        }
+
+        #imagenHome nav a {
+            color:#FFFFFF
+        }
     }
 }

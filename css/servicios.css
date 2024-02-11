@@ -1,5 +1,6 @@
 @import url("marinadog.css");
 
+/*POSICIONAMIENTO DE LAS CAJAS DE SERVICIOS*/
 main>div {
     width: 100%;
     display: flex;
@@ -25,6 +26,7 @@ article {
     text-align: center;
 }
 
+/*ESTILO DE LOS TITULOS DE LOS SERVICIOS (IMAGENES DE FONDO) */
 article h3 {
     width: 100%;
     text-align: center;
@@ -57,6 +59,7 @@ article:last-child div {
     background-image: url("../img/fotos/adiestramiento.jpg");
 }
 
+/*TEXTOS EXPLICATIVOS Y BOTONES*/
 p {
     margin: 20px 10px 50px 10px;
 }
@@ -65,6 +68,7 @@ button {
     margin: 10px;
 }
 
+/*ADAPTADOA  APNTALLAS PEQUEÑAS*/
 @media screen and (max-width: 900px) {
     article {
         width: 90%;

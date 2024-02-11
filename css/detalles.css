@@ -1,5 +1,6 @@
 @import url('reservar.css');
 
+/*ESTILO DEL FONDO DE LA PÁGINA Y DE LA CABECERA DE RESERVA*/
 section {
     background-image: none;
     height: min-content;
@@ -15,6 +16,7 @@ section:first-child {
     padding: 40px 0;
 }
 
+/*FORMULARIO DE RESERVA*/
 form>div {
     align-items: flex-end;
 }
@@ -38,6 +40,7 @@ form div>div:nth-child(3) {
     width: 10%;
 }
 
+/*ESTILO DE LOS DETALLES DE LA HABITACION*/
 section:last-child {
     margin: 20px auto;
     width: 90%;
@@ -110,6 +113,7 @@ section button {
     padding: 17px 60px;
 }
 
+/*ADAPTADO A PANTALLAS PEQUEÑAS*/
 @media screen and (max-width: 920px) {
     form div>div, form div>div:nth-child(3), [type="submit"] {
         margin: 10px 0;

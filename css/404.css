@@ -1,5 +1,6 @@
 @import url("marinadog.css");
 
+/*ESTILOS DE LA IMAGEN DE PERRO*/
 section {
     background-image: url('../img/fotos/perro4046.avif');
     height: 100vh;
@@ -9,6 +10,7 @@ section {
     background-repeat: no-repeat;
 }
 
+/*EFECTO BLUR SOBRE LA IMAGEN Y POSICIONAMIENTO DEL TEXTO*/
 .blur {
     height: 100%;
     display: flex;
@@ -18,6 +20,11 @@ section {
     padding-top: 10%;
 }
 
+.blur button {
+    margin-top: 5%;
+}
+
+/*TEXTOS*/
 h1 {
     color: #FFFFFF;
     font-size: 200px;
@@ -28,10 +35,6 @@ p {
     color: #FFFFFF;
     font-size: 30px;
     text-align: center;
-}
-
-.blur button {
-    margin-top: 5%;
 }
 
 /*AJUSTE A PANTALLAS PEQUEÑAS*/

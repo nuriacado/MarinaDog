@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Sarabun&display=swap');
 
+/*DEFINICION DE LAS VARIABLES QUE VOY A UTILIZAR PARA LOS COLORES DE LA PÁGINA*/
 :root {
     --primary-500: #398783;
     --primary-700: #204D4B;
@@ -18,6 +19,7 @@
     --error-500: #F7143B;
 }
 
+/*PREFORMATEO DE LA PÁGINA*/
 * {
     font-family: 'Sarabun', sans-serif;
     box-sizing: border-box;
@@ -26,6 +28,7 @@
     list-style: none;
 }
 
+/*ESTILO DE LOS TEXTOS*/
 h1 { 
     font-size: 50px;
     width: 100%;
@@ -65,7 +68,7 @@ header a:hover { text-decoration: none; }
 footer a { color: #FFFFFF }
 footer { color: #FFFFFF }
 
-
+/*ESTILO DE LOS BOTONES*/
 button {
     padding: 17px 35px;
     font-size: 20px;
@@ -120,7 +123,7 @@ header>div:last-child {
     align-items: flex-end;
     justify-content: space-between;
     height: 100%;
-    margin: 0 20px 0x 0;
+    margin: 0 20px 0 0;
     width: 60%;
 }
 
@@ -313,6 +316,11 @@ input.invalido::placeholder, textarea.invalido::placeholder {
         flex-direction: column;
         position: relative;
         width: 100%;
+    }
+
+    
+    nav a:hover {
+        padding-bottom: 20px;
     }
 
     #hamburguesa div, #hamburguesa ul, #hamburguesa div, #hamburguesa a, .desplegable li {
