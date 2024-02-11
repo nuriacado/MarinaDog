@@ -192,14 +192,26 @@ $(document).ready(function() {
     /* PARA QUE SE CIERRE EL MENU HAMBURGUESA CUANDO PULSAS FUERA */
     $(document).on("click",function(e) {
         let desplegable = document.getElementById("hamburguesa");
-        var container = $("#hamburguesa");
-        var menu = $("#menu")
+        let container = $("#hamburguesa");
+        let menu = $("#menu")
                            
-           if (!container.is(e.target) && container.has(e.target).length === 0 &&!menu.is(e.target) && desplegable!=null) { 
+           if (!container.is(e.target) && container.has(e.target).length === 0 && !menu.is(e.target) && desplegable!=null) { 
                 let menu = document.getElementById("menu");
                 desplegable.className = "";
                 let color = document.body.className == 'noche' ? "url('img/iconos/menuBlanco.png')" : "url('img/iconos/menuNegro.png')"
                 menu.style.backgroundImage = color;
            }
+    });
+
+    /* HACER ZOOM EN IMAGENES DE INSTALCIONES Y HABITACIONES */
+    $(".ampliar").click(function() {
+            let imagenAmpliada = $("<div class='imagen-ampliada'></div>");
+            let imagen = $(this).clone().appendTo(imagenAmpliada);
+            
+            imagen.click(function() {
+                imagenAmpliada.remove();
+            });
+
+        $("body").append(imagenAmpliada);
     });
 });
